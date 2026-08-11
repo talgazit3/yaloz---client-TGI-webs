@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אסף ילוז | משרד עורכי דין</title>
+<meta name="description" content="עו&quot;ד אסף ילוז — ליווי משפטי בליטיגציה אזרחית, גישור ויישוב סכסוכים, נזיקין והגנת הפרטיות. מקצועיות, הוגנות ואמון.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700&family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F5EF;
+    --cream-deep:#F1EDE2;
+    --paper:#FCFBF7;
+    --ink:#221F1B;
+    --ink-soft:#4A453D;
+    --wine:#6E2430;
+    --wine-deep:#4E1A22;
+    --gold:#A9824F;
+    --gold-soft:#D8C6A1;
+    --line:#DDD5C2;
+    --shadow: 0 20px 50px -25px rgba(34,31,27,0.35);
+    --serif: 'Frank Ruhl Libre', 'David Libre', serif;
+    --sans: 'Assistant', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-family:var(--serif);
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--wine);
+    display:flex;align-items:center;gap:12px;
+    margin-bottom:18px;
+    font-style:italic;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);display:inline-block;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;color:var(--ink);}
+  .rule{width:100%;height:1px;background:var(--line);border:none;}
+  .rule-dash{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:0 0 10px;}
+  .rule-dash span{width:34px;height:1px;background:var(--gold-soft);}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(247,245,239,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 32px;max-width:1120px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{height:34px;width:auto;}
+  .nav-links{display:flex;gap:34px;align-items:center;}
+  .nav-links a{
+    font-size:15px;color:var(--ink-soft);position:relative;padding:4px 0;
+    transition:color .25s ease;
+  }
+  .nav-links a:hover{color:var(--wine);}
+  .nav-cta{
+    background:var(--wine);color:#fff !important;
+    padding:10px 22px;border-radius:2px;font-size:14px;letter-spacing:.02em;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .nav-cta:hover{background:var(--wine-deep);transform:translateY(-1px);}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s;}
+
+  /* ===== Hero ===== */
+  .hero{
+    padding:92px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;
+  }
+  .hero-copy h1{
+    font-size:44px;line-height:1.28;font-weight:500;
+    letter-spacing:.005em;
+  }
+  .hero-copy h1 em{
+    font-style:normal;color:var(--wine);
+  }
+  .hero-copy p.lead{
+    margin:26px 0 0;font-size:18px;color:var(--ink-soft);max-width:46ch;font-weight:300;
+  }
+  .hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 30px;font-size:15px;letter-spacing:.02em;
+    border-radius:2px;transition:all .25s ease;cursor:pointer;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--wine);color:#fff;}
+  .btn-primary:hover{background:var(--wine-deep);transform:translateY(-1px);}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);}
+  .btn-outline:hover{border-color:var(--wine);color:var(--wine);}
+
+  .hero-portrait{
+    position:relative;
+    aspect-ratio:4/5;
+    border:1px solid var(--gold-soft);
+    padding:14px;
+  }
+  .hero-portrait::after{
+    content:"";position:absolute;inset:-14px;border:1px solid var(--line);z-index:-1;
+  }
+  .portrait-inner{
+    width:100%;height:100%;
+    background:linear-gradient(160deg,#EDE7D8,#E4DCC7);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:var(--ink-soft);
+    position:relative;overflow:hidden;
+  }
+  .portrait-inner svg{width:38%;opacity:.55;margin-bottom:18px;}
+  .portrait-caption{font-family:var(--serif);font-style:italic;font-size:14px;letter-spacing:.02em;text-align:center;padding:0 30px;color:var(--ink-soft);}
+
+  /* ===== Section shell ===== */
+  section{padding:110px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:34px;line-height:1.3;}
+  .alt-bg{background:var(--cream-deep);}
+
+  /* ===== About ===== */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start;}
+  .about-frame{
+    aspect-ratio:3/4;border:1px solid var(--gold-soft);padding:12px;position:relative;
+  }
+  .about-frame::after{content:"";position:absolute;inset:-12px;border:1px solid var(--line);z-index:-1;}
+  .about-frame .portrait-inner{background:linear-gradient(160deg,#E9E2D0,#DFD5BC);}
+  .about-copy p{color:var(--ink-soft);font-size:16.5px;margin:0 0 20px;}
+  .about-copy p:first-of-type{font-size:19px;color:var(--ink);font-weight:400;}
+  .values{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;
+    border-top:1px solid var(--line);
+  }
+  .value{
+    padding:22px 6px 18px 0;border-bottom:1px solid var(--line);
+  }
+  .value:nth-child(3n){padding-left:0;}
+  .value h4{
+    font-family:var(--serif);font-size:16px;font-weight:500;margin:0 0 6px;color:var(--wine);
+  }
+  .value p{margin:0;font-size:13.5px;color:var(--ink-soft);}
+
+  /* ===== Practice areas ===== */
+  .practice-lead{color:var(--ink-soft);font-size:16.5px;max-width:60ch;margin-top:14px;}
+  .practice-grid{
+    display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1px;background:var(--line);
+    margin-top:50px;border:1px solid var(--line);
+  }
+  .practice-card{
+    background:var(--paper);padding:38px 32px;position:relative;
+  }
+  .practice-card.featured{
+    background:var(--wine);color:#fff;grid-row:span 2;
+  }
+  .practice-card.featured h3, .practice-card.featured .p-num{color:#fff;}
+  .practice-card.featured p{color:#EBD9D9;}
+  .practice-card.featured .p-tag{color:var(--gold-soft);}
+  .p-num{
+    font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:.1em;
+  }
+  .p-tag{
+    display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);
+    margin-bottom:14px;font-weight:600;
+  }
+  .practice-card h3{font-size:22px;margin:8px 0 14px;font-weight:500;}
+  .practice-card p{color:var(--ink-soft);font-size:15px;margin:0;}
+  .featured .p-tag{opacity:.9;}
+
+  /* ===== Testimonials ===== */
+  .quote-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .quote{padding:40px 34px;border-left:1px solid var(--line);}
+  .quote:last-child{border-left:none;}
+  .quote-mark{font-family:var(--serif);font-size:44px;color:var(--gold-soft);line-height:1;margin-bottom:6px;display:block;}
+  .quote p{font-size:15.5px;color:var(--ink-soft);font-style:italic;font-family:var(--serif);line-height:1.7;}
+  .quote-name{margin-top:20px;font-size:13.5px;letter-spacing:.03em;color:var(--ink);font-weight:600;}
+  .quote-note{margin-top:44px;font-size:13px;color:var(--ink-soft);text-align:center;opacity:.75;}
+
+  /* ===== Contact ===== */
+  .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;}
+  .contact-info h2{font-size:32px;margin-bottom:20px;}
+  .contact-info p.lead{color:var(--ink-soft);font-size:16.5px;max-width:44ch;margin-bottom:40px;}
+  .info-row{display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--line);align-items:flex-start;}
+  .info-row:last-child{border-bottom:1px solid var(--line);}
+  .info-icon{width:20px;margin-top:3px;flex:none;color:var(--wine);}
+  .info-row a, .info-row span.val{font-size:16px;color:var(--ink);}
+  .info-row a:hover{color:var(--wine);}
+  .info-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:4px;}
+
+  form{background:var(--paper);border:1px solid var(--line);padding:44px;}
+  .form-row{margin-bottom:22px;}
+  .form-row label{display:block;font-size:13px;letter-spacing:.03em;color:var(--ink-soft);margin-bottom:8px;}
+  .form-row input, .form-row textarea{
+    width:100%;border:none;border-bottom:1px solid var(--line);background:transparent;
+    padding:10px 2px;font-family:var(--sans);font-size:15.5px;color:var(--ink);
+    transition:border-color .25s ease;
+  }
+  .form-row input:focus, .form-row textarea:focus{outline:none;border-color:var(--wine);}
+  .form-row textarea{resize:vertical;min-height:90px;}
+  .form-submit{
+    width:100%;background:var(--wine);color:#fff;border:none;padding:16px;font-size:15.5px;
+    letter-spacing:.02em;cursor:pointer;transition:background .25s ease;margin-top:6px;
+  }
+  .form-submit:hover{background:var(--wine-deep);}
+  .form-status{margin-top:14px;font-size:13.5px;color:var(--ink-soft);display:none;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--ink);color:#EFEAE0;padding:56px 0 30px;}
+  .footer-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;padding-bottom:34px;border-bottom:1px solid #3A362F;}
+  .footer-brand{font-family:var(--serif);font-size:22px;letter-spacing:.08em;}
+  .footer-brand span{color:var(--gold-soft);}
+  .footer-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .footer-links a{font-size:14px;color:#C9C3B4;}
+  .footer-links a:hover{color:#fff;}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:26px;font-size:13px;color:#8B8577;flex-wrap:wrap;gap:10px;}
+
+  /* ===== Responsive ===== */
+  @media (max-width:920px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px;}
+    .hero{padding:64px 0 60px;}
+    .hero-portrait{order:-1;max-width:320px;margin:0 auto;}
+    .about-grid{grid-template-columns:1fr;gap:40px;}
+    .about-frame{max-width:320px;margin:0 auto;}
+    .practice-grid{grid-template-columns:1fr;}
+    .practice-card.featured{grid-row:auto;}
+    .quote-row{grid-template-columns:1fr;}
+    .quote{border-left:none;border-top:1px solid var(--line);}
+    .quote:first-child{border-top:none;}
+    .contact-grid{grid-template-columns:1fr;gap:48px;}
+    .values{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links{position:fixed;inset:66px 0 0 0;background:var(--cream);flex-direction:column;
+      padding:36px 32px;gap:26px;transform:translateY(-120%);transition:transform .35s ease;border-top:1px solid var(--line);}
+    .nav-links.open{transform:translateY(0);}
+    .burger{display:block;}
+    .wrap{padding:0 22px;}
+    .hero-copy h1{font-size:32px;}
+    section{padding:72px 0;}
+    .section-head h2{font-size:27px;}
+    .values{grid-template-columns:1fr 1fr;}
+    form{padding:30px 24px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <img src="logo_cropped.png" alt="אסף ילוז – משרד עורכי דין">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#top">ראשי</a>
+      <a href="#about">אודות</a>
+      <a href="#practice">תחומי עיסוק</a>
+      <a href="#testimonials">לקוחות ממליצים</a>
+      <a href="#contact">צור קשר</a>
+      <a href="tel:0503480110" class="nav-cta">050-3480110</a>
+    </div>
+    <button class="burger" id="burger" aria-label="תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">משרד עורכי דין</div>
+        <h1>ליווי משפטי שנשען על<br><em>מקצועיות, הוגנות ואמון</em></h1>
+        <p class="lead">
+          עו"ד אסף ילוז מלווה לקוחות פרטיים בתיקים אזרחיים – בליטיגציה, גישור ויישוב סכסוכים,
+          נזיקין והגנת הפרטיות. יחס אישי, שקיפות מלאה, ומחויבות אמיתית לתוצאה.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">לתיאום שיחת ייעוץ</a>
+          <a href="tel:0503480110" class="btn btn-outline">התקשרו עכשיו — 050-3480110</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-inner">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="34" r="16" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 88c3-20 15-30 30-30s27 10 30 30" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <div class="portrait-caption">תמונתו המקצועית של עו"ד אסף ילוז<br>תתווסף כאן בקרוב</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-frame">
+        <div class="portrait-inner">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="34" r="16" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 88c3-20 15-30 30-30s27 10 30 30" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <div class="portrait-caption">תמונת עו"ד אסף ילוז</div>
+        </div>
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow">אודות</div>
+        <h2 style="font-size:34px;margin-bottom:22px;">עו"ד אסף ילוז</h2>
+        <p>
+          בוגר הפקולטה למשפטים באוניברסיטה העברית בירושלים, עו"ד אסף ילוז מלווה לקוחות פרטיים
+          בהליכים אזרחיים מורכבים — מתוך אמונה שכל תיק הוא קודם כול סיפור של אדם, ולא רק סעיף בחוק.
+        </p>
+        <p>
+          העבודה במשרד מתבססת על שילוב של ידע משפטי מוצק, חשיבה אסטרטגית וליווי צמוד לאורך כל
+          הדרך — משלב הייעוץ הראשוני ועד לסיום ההליך. אמינות ויושרה אינן סיסמאות אלא עקרונות
+          שמנחים כל פנייה, כל מסמך וכל שיחה מול הלקוח.
+        </p>
+        <p>
+          המשרד שם דגש מיוחד על זמינות ושקיפות: הלקוח יודע תמיד היכן עומד התיק, מהן האפשרויות
+          העומדות בפניו, ומה המשמעות המעשית של כל צעד.
+        </p>
+        <div class="values">
+          <div class="value"><h4>מקצועיות</h4><p>ידע משפטי מעודכן וחשיבה מדויקת בכל תיק.</p></div>
+          <div class="value"><h4>אמינות</h4><p>שקיפות מלאה בכל שלב בתהליך.</p></div>
+          <div class="value"><h4>יושרה</h4><p>עבודה אתית ללא פשרות על הדרך.</p></div>
+          <div class="value"><h4>ניסיון</h4><p>ניהול מעשי ומושכל של תיקים אזרחיים.</p></div>
+          <div class="value"><h4>יחס אישי</h4><p>כל לקוח מקבל תשומת לב וזמינות אמיתית.</p></div>
+          <div class="value"><h4>נגישות</h4><p>שפה ברורה, ללא ז'רגון מיותר.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRACTICE AREAS ===== -->
+  <section id="practice" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">תחומי עיסוק</div>
+        <h2>ליווי משפטי ממוקד, בתחומים שבהם הניסיון עושה הבדל</h2>
+        <p class="practice-lead">המשרד עוסק בעיקר במשפט אזרחי, עם דגש מרכזי על ניהול תיקים וליטיגציה אזרחית.</p>
+      </div>
+      <div class="practice-grid">
+        <div class="practice-card featured">
+          <span class="p-num">01</span>
+          <span class="p-tag">התחום המרכזי</span>
+          <h3>ליטיגציה אזרחית</h3>
+          <p>ייצוג וניהול תיקים וסכסוכים אזרחיים מול הצד השני ובבית המשפט, מהגשת התביעה ועד לפסק הדין — באסטרטגיה ברורה ובליווי צמוד לאורך כל ההליך.</p>
+        </div>
+        <div class="practice-card">
+          <span class="p-num">02</span>
+          <h3>גישור ויישוב סכסוכים</h3>
+          <p>ליווי וסיוע בפתרון מחלוקות בדרך מקצועית ויעילה, כשהמטרה היא הסדר טוב עבור הלקוח — לעיתים בלי הצורך בהליך משפטי ארוך.</p>
+        </div>
+        <div class="practice-card">
+          <span class="p-num">03</span>
+          <h3>דיני נזיקין</h3>
+          <p>ייעוץ וייצוג בתביעות נזיקין, נזקי גוף ורכוש, תוך מיצוי מלא של הזכויות מול הצד האחראי לנזק.</p>
+        </div>
+        <div class="practice-card">
+          <span class="p-num">04</span>
+          <h3>דיני הגנת הפרטיות</h3>
+          <p>ייעוץ וייצוג בסוגיות של פגיעה בפרטיות ושימוש לא ראוי במידע אישי — בעולם דיגיטלי שבו הזכות לפרטיות דורשת הגנה אקטיבית.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:10px;">
+        <div class="eyebrow">לקוחות ממליצים</div>
+        <h2>מה אומרים לקוחות שליווינו</h2>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0;">
+      <div class="quote-row">
+        <div class="quote">
+          <span class="quote-mark">”</span>
+          <p>ליווי מקצועי, סבלני וזמין לאורך כל התיק. הרגשתי שיש לי מישהו שבאמת בצד שלי.</p>
+          <div class="quote-name">לקוח פרטי</div>
+        </div>
+        <div class="quote">
+          <span class="quote-mark">”</span>
+          <p>תשומת לב לפרטים והסברים ברורים בכל שלב — בדיוק מה שצריך בתקופה מלחיצה.</p>
+          <div class="quote-name">לקוחה פרטית</div>
+        </div>
+        <div class="quote">
+          <span class="quote-mark">”</span>
+          <p>מקצועיות ואמינות מהשיחה הראשונה ועד לסגירת התיק. ממליץ בחום.</p>
+          <div class="quote-name">לקוח פרטי</div>
+        </div>
+      </div>
+      <p class="quote-note">* מקום זה מיועד להמלצות אמיתיות מלקוחות המשרד — יוחלף בתוכן סופי, וניתן לקשר לביקורות מדף העסק בגוגל.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="alt-bg">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">צור קשר</div>
+        <h2>נדבר על התיק שלכם</h2>
+        <p class="lead">פנייה ראשונית אינה מחייבת. השאירו פרטים או צרו קשר ישירות — אחזור אליכם בהקדם.</p>
+
+        <div class="info-row">
+          <span class="info-icon">☎</span>
+          <div><span class="info-label">טלפון</span><a href="tel:0503480110">050-3480110</a></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon">✉</span>
+          <div><span class="info-label">דוא"ל</span><a href="mailto:asafyaloz@gmail.com">asafyaloz@gmail.com</a></div>
+        </div>
+        <div class="info-row">
+          <span class="info-icon">🕒</span>
+          <div><span class="info-label">זמינות</span><span class="val">א'–ה', בתיאום מראש</span></div>
+        </div>
+      </div>
+
+      <form id="contactForm">
+        <div class="form-row"><label for="name">שם מלא</label><input id="name" name="name" type="text" required></div>
+        <div class="form-row"><label for="phone">טלפון</label><input id="phone" name="phone" type="tel" required></div>
+        <div class="form-row"><label for="email">דוא"ל</label><input id="email" name="email" type="email"></div>
+        <div class="form-row"><label for="message">כמה מילים על הפנייה</label><textarea id="message" name="message"></textarea></div>
+        <button type="submit" class="form-submit">שליחת פנייה</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">YALOZ <span>— משרד עורכי דין</span></div>
+      <div class="footer-links">
+        <a href="#top">ראשי</a>
+        <a href="#about">אודות</a>
+        <a href="#practice">תחומי עיסוק</a>
+        <a href="#testimonials">ממליצים</a>
+        <a href="#contact">צור קשר</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 אסף ילוז, משרד עורכי דין. כל הזכויות שמורות.</span>
+      <span>050-3480110 · asafyaloz@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const body = encodeURIComponent(`שם: ${name}\nטלפון: ${phone}\nדוא"ל: ${email}\n\n${message}`);
+    window.location.href = `mailto:asafyaloz@gmail.com?subject=${encodeURIComponent('פנייה חדשה מהאתר')}&body=${body}`;
+    status.style.display = 'block';
+    status.textContent = 'נפתחת תוכנת הדוא"ל שלכם לשליחת הפנייה...';
+  });
+</script>
+
+</body>
+</html>
