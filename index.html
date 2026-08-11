@@ -92,7 +92,14 @@
     border-bottom:1px solid var(--line-soft);
   }
   .brand{display:flex;align-items:center;gap:13px;}
-  .brand img{height:36px;width:auto;border-radius:4px;}
+  .brand img{
+    height:50px;
+    width:auto;
+    border-radius:4px;
+    mix-blend-mode:multiply;
+    object-fit:contain;
+    transform:scale(1.35);
+  }
   .brand-text{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:18px;font-weight:500;}
   .brand-text span{display:block;font-family:'Heebo',sans-serif;font-size:10.5px;font-weight:400;color:var(--brass);letter-spacing:.16em;margin-top:3px;}
 
@@ -310,7 +317,14 @@
     padding-bottom:28px;border-bottom:1px solid var(--line-soft);margin-bottom:24px;
   }
   .footer-brand{display:flex;align-items:center;gap:13px;}
-  .footer-brand img{height:30px;border-radius:4px;}
+  .footer-brand img{
+    height:42px;
+    width:auto;
+    border-radius:4px;
+    mix-blend-mode:multiply;
+    object-fit:contain;
+    transform:scale(1.35);
+  }
   .footer-brand span{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:16px;font-weight:500;}
   .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
   .footer-links a{font-size:13.5px;color:var(--muted);transition:color .3s;padding:5px 0;}
