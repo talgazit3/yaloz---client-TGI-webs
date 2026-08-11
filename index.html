@@ -91,14 +91,14 @@
     -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line-soft);
   }
-  .brand{display:flex;align-items:center;gap:13px;}
+  .brand{display:flex;align-items:center;gap:18px;}
   .brand img{
-    height:50px;
+    height:55px;
     width:auto;
-    border-radius:4px;
     mix-blend-mode:multiply;
     object-fit:contain;
-    transform:scale(1.35);
+    transform:scale(2.2);
+    transform-origin:center right;
   }
   .brand-text{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:18px;font-weight:500;}
   .brand-text span{display:block;font-family:'Heebo',sans-serif;font-size:10.5px;font-weight:400;color:var(--brass);letter-spacing:.16em;margin-top:3px;}
@@ -316,14 +316,14 @@
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
     padding-bottom:28px;border-bottom:1px solid var(--line-soft);margin-bottom:24px;
   }
-  .footer-brand{display:flex;align-items:center;gap:13px;}
+  .footer-brand{display:flex;align-items:center;gap:18px;}
   .footer-brand img{
-    height:42px;
+    height:48px;
     width:auto;
-    border-radius:4px;
     mix-blend-mode:multiply;
     object-fit:contain;
-    transform:scale(1.35);
+    transform:scale(1.8);
+    transform-origin:center right;
   }
   .footer-brand span{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:16px;font-weight:500;}
   .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
@@ -356,6 +356,11 @@
     header{padding:16px 6vw;}
     header.scrolled{padding:12px 6vw;}
     
+    .brand img{
+      height:45px;
+      transform:scale(1.8);
+    }
+
     nav ul{
       position:fixed;top:0;right:0;width:85%;max-width:320px;height:100vh;
       background:var(--stone);flex-direction:column;justify-content:flex-start;align-items:flex-start;
