@@ -67,10 +67,10 @@
   /* ---------- eyebrow ---------- */
   .eyebrow{
     display:inline-flex;align-items:center;gap:12px;
-    font-size:12.5px;letter-spacing:.22em;color:var(--brass);
+    font-size:12.5px;letter-spacing:.1em;color:var(--brass);
     font-weight:500;margin-bottom:22px;
   }
-  .eyebrow::before{content:"";width:30px;height:1px;background:var(--brass);}
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--brass);flex-shrink:0;}
 
   .section-head{max-width:600px;margin-bottom:50px;}
   .section-head h2{font-size:clamp(26px,3.1vw,38px);margin-bottom:18px;font-weight:500;}
@@ -79,29 +79,26 @@
   /* ---------- nav ---------- */
   header{
     position:fixed;top:0;right:0;left:0;z-index:100;
-    padding:20px 6vw;
+    padding:16px 6vw;
     display:flex;align-items:center;justify-content:space-between;
     transition:padding .5s var(--ease),background .5s var(--ease),border-color .5s var(--ease);
     border-bottom:1px solid transparent;
   }
   header.scrolled{
-    padding:14px 6vw;
-    background:rgba(247,245,240,.92);
+    padding:12px 6vw;
+    background:rgba(247,245,240,.95);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line-soft);
   }
-  .brand{display:flex;align-items:center;gap:18px;}
+  .brand{display:flex;align-items:center;gap:14px;}
   .brand img{
-    height:55px;
+    height:45px;
     width:auto;
-    mix-blend-mode:multiply;
     object-fit:contain;
-    transform:scale(2.2);
-    transform-origin:center right;
   }
   .brand-text{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:18px;font-weight:500;}
-  .brand-text span{display:block;font-family:'Heebo',sans-serif;font-size:10.5px;font-weight:400;color:var(--brass);letter-spacing:.16em;margin-top:3px;}
+  .brand-text span{display:block;font-family:'Heebo',sans-serif;font-size:10.5px;font-weight:400;color:var(--brass);letter-spacing:.16em;margin-top:1px;}
 
   nav ul{display:flex;gap:38px;align-items:center;}
   nav a{
@@ -136,10 +133,10 @@
     position:relative;overflow:hidden;padding:140px 6vw 80px;
   }
   .hero-line{
-    position:absolute;left:8%;top:0;bottom:0;width:1px;background:var(--line-soft);
+    position:absolute;right:5%;top:0;bottom:0;width:1px;background:var(--line-soft);
   }
   .scales-svg{
-    position:absolute;left:2%;bottom:6%;width:380px;max-width:42vw;opacity:.5;pointer-events:none;
+    position:absolute;left:2%;bottom:6%;width:380px;max-width:42vw;opacity:.35;pointer-events:none;
   }
   .scales-svg path,.scales-svg line,.scales-svg circle{
     fill:none;stroke:var(--brass);stroke-width:.75;
@@ -169,7 +166,7 @@
 
   .trust-strip{display:flex;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line-soft);padding-top:24px;}
   .trust-chip{
-    padding:0 24px 0 0;margin-left:0;font-size:13px;color:var(--muted);
+    padding:0 0 0 24px;margin-right:0;font-size:13px;color:var(--muted);
     display:flex;align-items:center;gap:9px;
     border-left:1px solid var(--line-soft);
   }
@@ -177,18 +174,13 @@
   .trust-chip .dot{width:4px;height:4px;border-radius:50%;background:var(--brass);flex-shrink:0;}
 
   .scroll-cue{
-    position:absolute;bottom:30px;right:50%;transform:translateX(50%);
+    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
     display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--muted);
     font-size:11px;letter-spacing:.18em;
   }
   .scroll-cue .line{width:1px;height:30px;background:linear-gradient(var(--brass),transparent);}
 
   /* ---------- quiet panel base ---------- */
-  .panel{
-    background:var(--glass-bg-strong);
-    border:1px solid var(--line-soft);
-    border-radius:var(--radius);
-  }
   .bg-stone{background:var(--stone);}
   .bg-stone-2{background:var(--stone-2);}
 
@@ -214,7 +206,7 @@
   .about-text p{color:var(--muted);margin-bottom:20px;font-size:16px;font-weight:300;}
   .value-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;border-top:1px solid var(--line-soft);padding-top:20px;}
   .value-tag{
-    font-size:13px;padding:0 16px 0 0;color:var(--ink-soft);font-weight:400;
+    font-size:13px;padding:0 0 0 16px;color:var(--ink-soft);font-weight:400;
     border-left:1px solid var(--line-soft);
   }
   .value-tag:last-child{border-left:none;}
@@ -316,14 +308,11 @@
     display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
     padding-bottom:28px;border-bottom:1px solid var(--line-soft);margin-bottom:24px;
   }
-  .footer-brand{display:flex;align-items:center;gap:18px;}
+  .footer-brand{display:flex;align-items:center;gap:14px;}
   .footer-brand img{
-    height:48px;
+    height:38px;
     width:auto;
-    mix-blend-mode:multiply;
     object-fit:contain;
-    transform:scale(1.8);
-    transform-origin:center right;
   }
   .footer-brand span{font-family:'Frank Ruhl Libre',serif;color:var(--ink);font-size:16px;font-weight:500;}
   .footer-links{display:flex;gap:20px;flex-wrap:wrap;}
@@ -357,8 +346,7 @@
     header.scrolled{padding:12px 6vw;}
     
     .brand img{
-      height:45px;
-      transform:scale(1.8);
+      height:36px;
     }
 
     nav ul{
@@ -384,7 +372,7 @@
     .practice-grid{grid-template-columns:1fr;}
     .practice-lead{flex-direction:column;text-align:center;}
     .trust-strip{flex-direction:column;gap:10px;}
-    .trust-chip{border-left:none;padding-right:0;}
+    .trust-chip{border-left:none;padding-left:0;}
     
     .footer-top, .footer-bottom{flex-direction:column;align-items:flex-start;gap:16px;}
     .scroll-cue{display:none;}
@@ -402,7 +390,7 @@
 
 <header id="siteHeader">
   <a href="#home" class="brand">
-    <img src="logo1.jpeg" alt="לוגו אסף ילוז משרד עורכי דין" onerror="this.style.display='none'">
+    <img src="logo1.png" alt="לוגו אסף ילוז משרד עורכי דין" onerror="this.style.display='none'">
     <span class="brand-text">אסף ילוז<span>משרד עורכי דין</span></span>
   </a>
   <nav>
