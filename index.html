@@ -4,100 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>אסף ילוז | משרד עורכי דין</title>
-<meta name="description" content="עו&quot;ד אסף ילוז — ליווי משפטי בליטיגציה אזרחית, גישור ויישוב סכסוכים, נזיקין והגנת הפרטיות. מקצועיות, הוגנות ואמון.">
+<meta name="description" content="עו&quot;ד אסף ילוז — ייצוג. אסטרטגיה. תוצאות. משרד עורכי דין העוסק במשפט אזרחי, ליטיגציה, גישור ויישוב סכסוכים.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy-dark: #0A111E;
-    --navy-main: #101B2B;
-    --navy-light: #1C2B3E;
+    --navy-black: #0B1017;
+    --navy-card: #121924;
     --gold: #C5A059;
-    --gold-light: #E8D3A7;
-    --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-    --bg-light: #F8FAFC;
+    --gold-hover: #D4AF37;
+    --gold-light: #F4E8C1;
+    --bg-light: #FAFAFC;
     --bg-white: #FFFFFF;
-    --text-dark: #0F172A;
+    --text-dark: #1E293B;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
-    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.03);
-    --shadow-md: 0 10px 30px -5px rgba(10, 17, 30, 0.08);
-    --shadow-lg: 0 20px 40px -10px rgba(10, 17, 30, 0.15);
+    --border-dark: #2A364F;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 20px 40px rgba(0, 0, 0, 0.12);
     --font-main: 'Assistant', sans-serif;
   }
 
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
     font-family: var(--font-main);
     background: var(--bg-light);
     color: var(--text-dark);
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   img { max-width: 100%; display: block; }
   a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
+  /* ===== Typography & Accents ===== */
   .eyebrow {
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 2px;
     color: var(--gold);
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     text-transform: uppercase;
   }
   .eyebrow::before {
     content: "";
-    width: 24px;
+    width: 20px;
     height: 2px;
-    background: var(--gold-gradient);
-    display: inline-block;
+    background: var(--gold);
   }
 
-  h1, h2, h3 { font-family: var(--font-main); font-weight: 800; margin: 0; color: var(--navy-main); }
+  h1, h2, h3 { font-family: var(--font-main); color: var(--text-dark); }
 
   /* ===== Header ===== */
   header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
   }
   .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 32px;
-    max-width: 1200px;
+    padding: 14px 24px;
+    max-width: 1180px;
     margin: 0 auto;
   }
-  .brand { display: flex; align-items: center; gap: 12px; }
-  .brand img { height: 42px; width: auto; }
+  .brand-logo img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+  }
   .nav-links { display: flex; gap: 32px; align-items: center; }
   .nav-links a {
     font-size: 16px;
     font-weight: 600;
-    color: var(--navy-main);
-    position: relative;
-    padding: 6px 0;
+    color: var(--text-dark);
     transition: color 0.25s ease;
   }
   .nav-links a:hover { color: var(--gold); }
   .nav-cta {
-    background: var(--navy-main);
-    color: var(--gold-light) !important;
+    background: var(--navy-black);
+    color: #FFFFFF !important;
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-weight: 700 !important;
     font-size: 15px;
     transition: all 0.3s ease;
@@ -105,18 +103,16 @@
   }
   .nav-cta:hover {
     background: var(--gold);
-    color: var(--navy-dark) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    color: var(--navy-black) !important;
   }
-  .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; z-index: 110; }
-  .burger span { display: block; width: 26px; height: 2.5px; background: var(--navy-main); margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+  .burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+  .burger span { display: block; width: 24px; height: 2px; background: var(--text-dark); margin: 5px 0; transition: 0.3s; }
 
-  /* ===== Hero ===== */
+  /* ===== Hero Section ===== */
   .hero {
-    padding: 110px 0 95px;
-    background: radial-gradient(circle at 85% 15%, var(--navy-light) 0%, var(--navy-dark) 100%);
+    background: var(--navy-black);
     color: #FFFFFF;
+    padding: 90px 0 80px;
     position: relative;
     overflow: hidden;
   }
@@ -124,328 +120,340 @@
     content: "";
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--gold-gradient);
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
   }
   .hero .wrap {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1fr 0.9fr;
     gap: 60px;
     align-items: center;
   }
-  .hero-copy h1 {
-    font-size: 50px;
-    line-height: 1.2;
-    color: #FFFFFF;
+  .hero-tag {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: 48px;
+    line-height: 1.15;
     font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 20px;
   }
-  .hero-copy h1 em {
-    font-style: normal;
-    background: var(--gold-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .hero-title span { color: var(--gold); }
+  .hero-slogan {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
   }
-  .hero-copy p.lead {
-    margin: 24px 0 0;
-    font-size: 19px;
-    color: #CBD5E1;
-    max-width: 48ch;
-    font-weight: 300;
+  .hero-desc {
+    font-size: 18px;
+    color: #94A3B8;
+    max-width: 520px;
+    margin-bottom: 36px;
+    font-weight: 400;
     line-height: 1.7;
   }
-  .hero-cta { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 34px;
+    padding: 15px 32px;
     font-size: 16px;
     font-weight: 700;
-    border-radius: 50px;
+    border-radius: 4px;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid transparent;
   }
-  .btn-primary {
-    background: var(--gold-gradient);
-    color: var(--navy-dark);
-    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy-black);
   }
-  .btn-primary:hover {
+  .btn-gold:hover {
+    background: var(--gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.4);
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.25);
   }
-  .btn-outline {
-    border: 1px solid rgba(255, 255, 255, 0.25);
+  .btn-outline-white {
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #FFFFFF;
-    background: rgba(255, 255, 255, 0.04);
   }
-  .btn-outline:hover {
+  .btn-outline-white:hover {
     border-color: var(--gold);
-    color: var(--gold-light);
-    background: rgba(197, 160, 89, 0.1);
+    color: var(--gold);
   }
 
-  .hero-portrait {
+  .hero-img-wrap {
     position: relative;
-    aspect-ratio: 4/5;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(197, 160, 89, 0.3);
+    border: 1px solid var(--border-dark);
+    box-shadow: var(--shadow-elevated);
+    background: var(--navy-card);
   }
-  .portrait-inner {
-    width: 100%; height: 100%;
-    background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy-dark) 100%);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    color: #94A3B8;
-    position: relative;
+  .hero-img-wrap img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
-  .portrait-inner svg { width: 35%; opacity: 0.35; margin-bottom: 20px; color: var(--gold); }
-  .portrait-caption { font-size: 15px; text-align: center; padding: 0 30px; color: #CBD5E1; }
 
-  /* ===== Section shell ===== */
-  section { padding: 100px 0; }
-  .section-head { max-width: 680px; margin-bottom: 56px; }
-  .section-head h2 { font-size: 36px; line-height: 1.25; font-weight: 800; color: var(--navy-main); }
-  .alt-bg { background: #F1F5F9; }
+  /* ===== Section Base ===== */
+  section { padding: 90px 0; }
+  .section-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--navy-black);
+  }
 
-  /* ===== About ===== */
-  .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
-  .about-frame {
-    aspect-ratio: 3/4;
-    border-radius: 12px;
+  /* ===== About Section ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-img {
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-soft);
     border: 1px solid var(--border-color);
   }
-  .about-frame .portrait-inner { background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%); color: var(--navy-main); }
-  .about-copy p { color: var(--text-muted); font-size: 17.5px; margin: 0 0 20px; line-height: 1.7; }
-  .about-copy p:first-of-type { font-size: 20px; color: var(--navy-main); font-weight: 600; }
-
-  .values {
+  .about-content p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.75;
+  }
+  .about-content p strong { color: var(--navy-black); }
+  .values-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin-top: 40px;
+    margin-top: 30px;
   }
-  .value {
-    padding: 20px;
+  .value-item {
+    padding: 16px 20px;
     background: var(--bg-white);
-    border-radius: 8px;
-    border-top: 3px solid var(--gold);
-    box-shadow: var(--shadow-sm);
+    border-right: 3px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: var(--shadow-soft);
   }
-  .value h4 { font-size: 17px; font-weight: 700; margin: 0 0 6px; color: var(--navy-main); }
-  .value p { margin: 0; font-size: 14px; color: var(--text-muted); }
+  .value-item h4 { font-size: 16px; font-weight: 700; color: var(--navy-black); margin-bottom: 4px; }
+  .value-item p { font-size: 14px; color: var(--text-muted); margin: 0; }
 
-  /* ===== Practice areas ===== */
-  .practice-lead { color: var(--text-muted); font-size: 18px; max-width: 60ch; margin-top: 14px; }
+  /* ===== Practice Areas (Clean Design) ===== */
+  .practice-sec { background: var(--bg-white); }
+  .practice-head { text-align: center; max-width: 650px; margin: 0 auto 60px; }
   .practice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .practice-box {
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .practice-box:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+    background: #FFFFFF;
+  }
+  .practice-box.main-box {
+    border-right: 4px solid var(--gold);
+  }
+  .practice-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--navy-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .practice-box h3 span.badge {
+    font-size: 12px;
+    background: var(--gold);
+    color: var(--navy-black);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+  }
+  .practice-box p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  /* ===== Testimonials ===== */
+  .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin-top: 50px;
+    margin-top: 48px;
   }
-  .practice-card {
+  .testimonial-box {
     background: var(--bg-white);
-    padding: 38px 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    padding: 32px;
+    border-radius: 6px;
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    position: relative;
+    box-shadow: var(--shadow-soft);
   }
-  .practice-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--gold);
+  .testimonial-box p {
+    font-size: 16px;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
-  .practice-card.featured {
-    background: var(--navy-main);
-    color: #FFFFFF;
-    grid-column: span 1;
-    border-color: var(--gold);
-  }
-  .practice-card.featured h3, .practice-card.featured .p-num { color: #FFFFFF; }
-  .practice-card.featured p { color: #94A3B8; }
-  .practice-card.featured .p-tag { background: rgba(197, 160, 89, 0.2); color: var(--gold-light); }
-
-  .p-num {
+  .testimonial-author {
     font-size: 14px;
-    font-weight: 800;
-    color: var(--gold);
-    margin-bottom: 12px;
-    display: block;
-  }
-  .p-tag {
-    display: inline-block;
-    font-size: 12px;
     font-weight: 700;
-    color: var(--navy-main);
-    background: rgba(197, 160, 89, 0.15);
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    color: var(--gold);
+    border-top: 1px solid var(--border-color);
+    padding-top: 14px;
   }
-  .practice-card h3 { font-size: 22px; margin: 0 0 12px; font-weight: 700; }
-  .practice-card p { color: var(--text-muted); font-size: 15px; margin: 0; line-height: 1.6; }
 
-  /* ===== Testimonials ===== */
-  .quote-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-  .quote {
-    background: var(--bg-white);
-    padding: 32px 28px;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
+  /* ===== Contact Section ===== */
+  .contact-sec { background: var(--navy-black); color: #FFFFFF; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
   }
-  .quote-mark { font-family: 'Playfair Display', serif; font-size: 50px; color: var(--gold); line-height: 1; margin-bottom: 10px; display: block; }
-  .quote p { font-size: 16px; color: var(--text-dark); line-height: 1.7; margin: 0; }
-  .quote-name { margin-top: 20px; font-size: 14px; font-weight: 700; color: var(--navy-main); border-top: 1px solid var(--border-color); padding-top: 14px; }
-  .quote-note { margin-top: 40px; font-size: 14px; color: var(--text-muted); text-align: center; }
-
-  /* ===== Contact ===== */
-  .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 60px; align-items: start; }
-  .contact-info h2 { font-size: 34px; margin-bottom: 16px; }
-  .contact-info p.lead { color: var(--text-muted); font-size: 17px; margin-bottom: 36px; }
+  .contact-info .section-title { color: #FFFFFF; }
+  .contact-info p { color: #94A3B8; font-size: 18px; margin-bottom: 36px; }
   
-  .info-row { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--border-color); align-items: center; }
-  .info-icon {
-    width: 44px;
-    height: 44px;
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .contact-icon {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: rgba(197, 160, 89, 0.15);
     color: var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    flex: none;
+    font-weight: 700;
+    font-size: 20px;
   }
-  .info-row a, .info-row span.val { font-size: 17px; font-weight: 600; color: var(--navy-main); }
-  .info-row a:hover { color: var(--gold); }
-  .info-label { font-size: 13px; color: var(--text-muted); display: block; font-weight: 500; }
+  .contact-text label { font-size: 13px; color: #64748B; display: block; }
+  .contact-text a, .contact-text span { font-size: 18px; font-weight: 700; color: #FFFFFF; }
+  .contact-text a:hover { color: var(--gold); }
 
-  form {
-    background: var(--bg-white);
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
+  .contact-form {
+    background: var(--navy-card);
     padding: 40px;
-    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-dark);
   }
-  .form-row { margin-bottom: 20px; }
-  .form-row label { display: block; font-size: 14px; font-weight: 600; color: var(--navy-main); margin-bottom: 8px; }
-  .form-row input, .form-row textarea {
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-size: 14px; color: #CBD5E1; margin-bottom: 8px; font-weight: 600; }
+  .form-group input, .form-group textarea {
     width: 100%;
-    border: 1px solid var(--border-color);
-    background: var(--bg-light);
-    border-radius: 6px;
-    padding: 12px 14px;
+    padding: 14px;
+    background: #0B1017;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    color: #FFFFFF;
     font-family: var(--font-main);
     font-size: 15px;
-    color: var(--text-dark);
-    transition: all 0.25s ease;
   }
-  .form-row input:focus, .form-row textarea:focus {
+  .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--gold);
-    background: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
   }
-  .form-row textarea { resize: vertical; min-height: 100px; }
-  .form-submit {
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .btn-submit {
     width: 100%;
-    background: var(--navy-main);
-    color: #FFFFFF;
-    border: none;
     padding: 16px;
+    background: var(--gold);
+    color: var(--navy-black);
+    font-weight: 800;
     font-size: 16px;
-    font-weight: 700;
-    border-radius: 50px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: background 0.3s ease;
   }
-  .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-  .form-status { margin-top: 14px; font-size: 14px; color: var(--text-muted); display: none; text-align: center; }
+  .btn-submit:hover { background: var(--gold-hover); }
 
   /* ===== Footer ===== */
-  footer { background: var(--navy-dark); color: #E2E8F0; padding: 60px 0 30px; border-top: 1px solid rgba(197, 160, 89, 0.2); }
-  .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; padding-bottom: 34px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-  .footer-brand { font-size: 22px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }
-  .footer-brand span { color: var(--gold); }
-  .footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
-  .footer-links a { font-size: 15px; color: #94A3B8; font-weight: 500; transition: color 0.2s; }
-  .footer-links a:hover { color: #FFFFFF; }
-  .footer-bottom { display: flex; justify-content: space-between; padding-top: 26px; font-size: 14px; color: #64748B; flex-wrap: wrap; gap: 10px; }
+  footer {
+    background: #06090E;
+    color: #64748B;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+  }
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-logo img { height: 40px; opacity: 0.8; filter: brightness(0) invert(1); }
 
   /* ===== Responsive ===== */
   @media (max-width: 992px) {
-    .practice-grid { grid-template-columns: 1fr 1fr; }
-    .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
-    .hero-portrait { max-width: 360px; margin: 0 auto; width: 100%; }
+    .hero .wrap { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .hero-desc { margin-left: auto; margin-right: auto; }
+    .hero-actions { justify-content: center; }
+    .hero-img-wrap { max-width: 450px; margin: 0 auto; }
+    
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .about-frame { max-width: 340px; margin: 0 auto; width: 100%; }
-    .quote-row { grid-template-columns: 1fr; }
+    .about-img { max-width: 450px; margin: 0 auto; }
+    
+    .practice-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 
-  @media (max-width: 720px) {
-    .nav { padding: 14px 20px; }
-    .nav-links {
-      position: fixed; inset: 69px 0 0 0; background: #FFFFFF; flex-direction: column;
-      padding: 32px 24px; gap: 20px; transform: translateY(-150%); transition: transform 0.35s ease;
-      border-top: 1px solid var(--border-color); box-shadow: var(--shadow-lg);
-      height: calc(100vh - 69px); overflow-y: auto; align-items: stretch; text-align: center;
-    }
-    .nav-links.open { transform: translateY(0); }
-    .nav-links a { font-size: 18px; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
-    .nav-cta { margin-top: 10px; padding: 14px 22px; font-size: 16px; text-align: center; }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
     .burger { display: block; }
-    
-    .wrap { padding: 0 20px; }
-    .hero { padding: 60px 0; }
-    .hero-copy h1 { font-size: 32px; }
-    .hero-copy p.lead { font-size: 16px; }
-    .hero-cta { flex-direction: column; width: 100%; }
-    .hero-cta .btn { width: 100%; }
-    
-    section { padding: 60px 0; }
-    .section-head { margin-bottom: 32px; }
-    .section-head h2 { font-size: 26px; }
-    
-    .values { grid-template-columns: 1fr; }
-    .practice-grid { grid-template-columns: 1fr; }
-    
-    form { padding: 24px 20px; }
-    
-    .footer-top { flex-direction: column; align-items: flex-start; gap: 20px; }
-    .footer-links { flex-direction: column; gap: 12px; }
-    .footer-bottom { flex-direction: column; gap: 10px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { transition: none !important; }
+    .hero-title { font-size: 34px; }
+    .hero-slogan { font-size: 20px; }
+    .section-title { font-size: 28px; }
+    .values-list { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <nav class="nav">
-    <a class="brand" href="#top">
-      <img src="logo_cropped.png" alt="אסף ילוז – משרד עורכי דין">
+    <a href="#top" class="brand-logo">
+      <img src="logo1.jpeg" alt="אסף ילוז - משרד עורכי דין">
     </a>
-    <div class="nav-links" id="navLinks">
+    <div class="nav-links">
       <a href="#top">ראשי</a>
       <a href="#about">אודות</a>
       <a href="#practice">תחומי עיסוק</a>
-      <a href="#testimonials">לקוחות ממליצים</a>
+      <a href="#testimonials">המלצות</a>
       <a href="#contact">צור קשר</a>
       <a href="tel:0503480110" class="nav-cta">050-3480110</a>
     </div>
-    <button class="burger" id="burger" aria-label="תפריט">
+    <button class="burger" aria-label="תפריט">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -455,26 +463,20 @@
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero-copy">
-        <div class="eyebrow">משרד עורכי דין</div>
-        <h1>ליווי משפטי שנשען על<br><em>מקצועיות, הוגנות ואמון</em></h1>
-        <p class="lead">
-          עו"ד אסף ילוז מלווה לקוחות פרטיים בתיקים אזרחיים – בליטיגציה, גישור ויישוב סכסוכים,
-          נזיקין והגנת הפרטיות. יחס אישי, שקיפות מלאה, ומחויבות אמיתית לתוצאה.
+      <div class="hero-content">
+        <div class="hero-tag">אסף ילוז — משרד עורכי דין</div>
+        <h1 class="hero-title">ליווי משפטי. <span>ביטחון אמיתי.</span></h1>
+        <div class="hero-slogan">ייצוג. אסטרטגיה. תוצאות.</div>
+        <p class="hero-desc">
+          מתן ייעוץ וייצוג משפטי מקצועי, אישי ומדויק, עם מחויבות מלאה להשגת התוצאה הטובה ביותר עבור לקוחותיי.
         </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">לתיאום שיחת ייעוץ</a>
-          <a href="tel:0503480110" class="btn btn-outline">התקשרו עכשיו — 050-3480110</a>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold">תיאום שיחת ייעוץ</a>
+          <a href="tel:0503480110" class="btn btn-outline-white">חיוג ישיר: 050-3480110</a>
         </div>
       </div>
-      <div class="hero-portrait">
-        <div class="portrait-inner">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="34" r="16" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M20 88c3-20 15-30 30-30s27 10 30 30" stroke="currentColor" stroke-width="1.4"/>
-          </svg>
-          <div class="portrait-caption">תמונתו המקצועית של עו"ד אסף ילוז<br>תתווסף כאן בקרוב</div>
-        </div>
+      <div class="hero-img-wrap">
+        <img src="image1.jpeg" alt="עו&quot;ד אסף ילוז">
       </div>
     </div>
   </section>
@@ -482,72 +484,68 @@
   <!-- ===== ABOUT ===== -->
   <section id="about">
     <div class="wrap about-grid">
-      <div class="about-frame">
-        <div class="portrait-inner">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="34" r="16" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M20 88c3-20 15-30 30-30s27 10 30 30" stroke="currentColor" stroke-width="1.4"/>
-          </svg>
-          <div class="portrait-caption">תמונת עו"ד אסף ילוז</div>
-        </div>
+      <div class="about-img">
+        <img src="image1.jpeg" alt="עו&quot;ד אסף ילוז - אודות">
       </div>
-      <div class="about-copy">
-        <div class="eyebrow">אודות</div>
-        <h2 style="font-size:34px;margin-bottom:22px;">עו"ד אסף ילוז</h2>
+      <div class="about-content">
+        <div class="eyebrow">אודות המשרד</div>
+        <h2 class="section-title">מקצועיות, אמינות ויושרה כערכים מובילים</h2>
         <p>
-          בוגר הפקולטה למשפטים באוניברסיטה העברית בירושלים, עו"ד אסף ילוז מלווה לקוחות פרטיים
-          בהליכים אזרחיים מורכבים — מתוך אמונה שכל תיק הוא קודם כול סיפור של אדם, ולא רק סעיף בחוק.
+          <strong>עו"ד אסף ילוז</strong>, בוגר האוניברסיטה העברית, מעניק ליווי משפטי כולל ומקיף בתחומי המשפט האזרחי. המשרד חרט על דגלו מצוינות מקצועית לצד יחס אישי וזמינות גבוהה לכל לקוח.
         </p>
         <p>
-          העבודה במשרד מתבססת על שילוב של ידע משפטי מוצק, חשיבה אסטרטגית וליווי צמוד לאורך כל
-          הדרך — משלב הייעוץ הראשוני ועד לסיום ההליך. אמינות ויושרה אינן סיסמאות אלא עקרונות
-          שמנחים כל פנייה, כל מסמך וכל שיחה מול הלקוח.
+          כל תיק מנוהל בראייה אסטרטגית ממוקדת תוצאה, תוך שמירה על שקיפות מלאה והגינות לכל אורך התהליך המשפטי.
         </p>
-        <p>
-          המשרד שם דגש מיוחד על זמינות ושקיפות: הלקוח יודע תמיד היכן עומד התיק, מהן האפשרויות
-          העומדות בפניו, ומה המשמעות המעשית של כל צעד.
-        </p>
-        <div class="values">
-          <div class="value"><h4>מקצועיות</h4><p>ידע משפטי מעודכן וחשיבה מדויקת בכל תיק.</p></div>
-          <div class="value"><h4>אמינות</h4><p>שקיפות מלאה בכל שלב בתהליך.</p></div>
-          <div class="value"><h4>יושרה</h4><p>עבודה אתית ללא פשרות על הדרך.</p></div>
-          <div class="value"><h4>ניסיון</h4><p>ניהול מעשי ומושכל של תיקים אזרחיים.</p></div>
-          <div class="value"><h4>יחס אישי</h4><p>כל לקוח מקבל תשומת לב וזמינות אמיתית.</p></div>
-          <div class="value"><h4>נגישות</h4><p>שפה ברורה, ללא ז'רגון מיותר.</p></div>
+        
+        <div class="values-list">
+          <div class="value-item">
+            <h4>בוגר האוניברסיטה העברית</h4>
+            <p>השכלה משפטית מעמיקה ויסודית.</p>
+          </div>
+          <div class="value-item">
+            <h4>אסטרטגיה מנצחת</h4>
+            <p>חשיבה משפטית חדה וממוקדת תוצאות.</p>
+          </div>
+          <div class="value-item">
+            <h4>אמינות ויושרה</h4>
+            <p>שקיפות מלאה בגובה העיניים.</p>
+          </div>
+          <div class="value-item">
+            <h4>יחס אישי וזמין</h4>
+            <p>מענה ישיר ומקצועי לכל פנייה.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== PRACTICE AREAS ===== -->
-  <section id="practice" class="alt-bg">
+  <section id="practice" class="practice-sec">
     <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">תחומי עיסוק</div>
-        <h2>ליווי משפטי ממוקד, בתחומים שבהם הניסיון עושה הבדל</h2>
-        <p class="practice-lead">המשרד עוסק בעיקר במשפט אזרחי, עם דגש מרכזי על ניהול תיקים וליטיגציה אזרחית.</p>
+      <div class="practice-head">
+        <div class="eyebrow">תחומי התמחות</div>
+        <h2 class="section-title">מעטפת משפטית יסודית ומקצועית</h2>
       </div>
+
       <div class="practice-grid">
-        <div class="practice-card featured">
-          <span class="p-num">01</span>
-          <span class="p-tag">התחום המרכזי</span>
-          <h3>ליטיגציה אזרחית</h3>
-          <p>ייצוג וניהול תיקים וסכסוכים אזרחיים מול הצד השני ובבית המשפט, מהגשת התביעה ועד לפסק הדין — באסטרטגיה ברורה ובליווי צמוד לאורך כל ההליך.</p>
+        <div class="practice-box main-box">
+          <h3>ליטיגציה אזרחית <span class="badge">תחום מרכזי</span></h3>
+          <p>ייצוג וניהול תיקים וסכסוכים אזרחיים מורכבים בערכאות המשפט השונות, בנחישות ובמקצועיות ללא פשרות.</p>
         </div>
-        <div class="practice-card">
-          <span class="p-num">02</span>
+
+        <div class="practice-box">
           <h3>גישור ויישוב סכסוכים</h3>
-          <p>ליווי וסיוע בפתרון מחלוקות בדרך מקצועית ויעילה, כשהמטרה היא הסדר טוב עבור הלקוח — לעיתים בלי הצורך בהליך משפטי ארוך.</p>
+          <p>פתרון מחלוקות וסכסוכים מחוץ לכתלי בית המשפט בדרכים מקצועיות, יעילות ודיסקרטיות.</p>
         </div>
-        <div class="practice-card">
-          <span class="p-num">03</span>
+
+        <div class="practice-box">
           <h3>דיני נזיקין</h3>
-          <p>ייעוץ וייצוג בתביעות נזיקין, נזקי גוף ורכוש, תוך מיצוי מלא של הזכויות מול הצד האחראי לנזק.</p>
+          <p>ייעוץ, ליווי וייצוג משפטי בתביעות נזיקין, נזקי גוף ונזקי רכוש מול הגורמים הרלוונטיים.</p>
         </div>
-        <div class="practice-card">
-          <span class="p-num">04</span>
+
+        <div class="practice-box">
           <h3>דיני הגנת הפרטיות</h3>
-          <p>ייעוץ וייצוג בסוגיות של פגיעה בפרטיות ושימוש לא ראוי במידע אישי — בעולם דיגיטלי שבו הזכות לפרטיות דורשת הגנה אקטיבית.</p>
+          <p>ייצוג וייעוץ משפטי בסוגיות מורכבות של פגיעה בפרטיות, שימוש לא מורשה במידע ושמירת הזכויות.</p>
         </div>
       </div>
     </div>
@@ -556,102 +554,103 @@
   <!-- ===== TESTIMONIALS ===== -->
   <section id="testimonials">
     <div class="wrap">
-      <div class="section-head" style="margin-bottom:10px;">
+      <div style="text-align: center;">
         <div class="eyebrow">לקוחות ממליצים</div>
-        <h2>מה אומרים לקוחות שליווינו</h2>
+        <h2 class="section-title">אמון שנבנה במעשים</h2>
       </div>
-      <div class="quote-row">
-        <div class="quote">
-          <span class="quote-mark">”</span>
-          <p>ליווי מקצועי, סבלני וזמין לאורך כל התיק. הרגשתי שיש לי מישהו שבאמת בצד שלי.</p>
-          <div class="quote-name">לקוח פרטי</div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-box">
+          <p>"ייצוג מקצועי ברמה הגבוהה ביותר. אסף ליווה אותי בסבלנות, בחדות ובשקיפות מלאה עד לתוצאה המיוחלת."</p>
+          <div class="testimonial-author">לקוח פרטי — תיק אזרחי</div>
         </div>
-        <div class="quote">
-          <span class="quote-mark">”</span>
-          <p>תשומת לב לפרטים והסברים ברורים בכל שלב — בדיוק מה שצריך בתקופה מלחיצה.</p>
-          <div class="quote-name">לקוחה פרטית</div>
+        <div class="testimonial-box">
+          <p>"הרגשתי שיש על מי לסמוך מרגע הפגישה הראשונה. זמינות מוחלטת, אמינות ויחס אישי נדיר."</p>
+          <div class="testimonial-author">לקוחה — יישוב סכסוך</div>
         </div>
-        <div class="quote">
-          <span class="quote-mark">”</span>
-          <p>מקצועיות ואמינות מהשיחה הראשונה ועד לסגירת התיק. ממליץ בחום.</p>
-          <div class="quote-name">לקוח פרטי</div>
+        <div class="testimonial-box">
+          <p>"חשיבה אסטרטגית חדה וירידה לפרטים הקטנים ביותר. מומלץ בחום לכל מי שזקוק לייצוג משפטי איכותי."</p>
+          <div class="testimonial-author">לקוח פרטי — תביעת נזיקין</div>
         </div>
       </div>
-      <p class="quote-note">* מקום זה מיועד להמלצות אמיתיות מלקוחות המשרד — יוחלף בתוכן סופי, וניתן לקשר לביקורות מדף העסק בגוגל.</p>
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section id="contact" class="alt-bg">
+  <section id="contact" class="contact-sec">
     <div class="wrap contact-grid">
       <div class="contact-info">
-        <div class="eyebrow">צור קשר</div>
-        <h2>נדבר על התיק שלכם</h2>
-        <p class="lead">פנייה ראשונית אינה מחייבת. השאירו פרטים או צרו קשר ישירות — אחזור אליכם בהקדם.</p>
+        <div class="eyebrow">יצירת קשר</div>
+        <h2 class="section-title">תיאום ייעוץ משפטי</h2>
+        <p>מוזמנים ליצור קשר ישיר או להשאיר פרטים ונחזור אליכם בהקדם.</p>
 
-        <div class="info-row">
-          <span class="info-icon">☎</span>
-          <div><span class="info-label">טלפון</span><a href="tel:0503480110">050-3480110</a></div>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="contact-text">
+            <label>טלפון ישיר</label>
+            <a href="tel:0503480110">050-3480110</a>
+          </div>
         </div>
-        <div class="info-row">
-          <span class="info-icon">✉</span>
-          <div><span class="info-label">דוא"ל</span><a href="mailto:asafyaloz@gmail.com">asafyaloz@gmail.com</a></div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">✉</div>
+          <div class="contact-text">
+            <label>דואר אלקטרוני</label>
+            <a href="mailto:asafyaloz@gmail.com">asafyaloz@gmail.com</a>
+          </div>
         </div>
-        <div class="info-row">
-          <span class="info-icon">🕒</span>
-          <div><span class="info-label">זמינות</span><span class="val">א'–ה', בתיאום מראש</span></div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="contact-text">
+            <label>אזור פעילות</label>
+            <span>שירות משפטי בכל רחבי הארץ</span>
+          </div>
         </div>
       </div>
 
-      <form id="contactForm">
-        <div class="form-row"><label for="name">שם מלא</label><input id="name" name="name" type="text" required></div>
-        <div class="form-row"><label for="phone">טלפון</label><input id="phone" name="phone" type="tel" required></div>
-        <div class="form-row"><label for="email">דוא"ל</label><input id="email" name="email" type="email"></div>
-        <div class="form-row"><label for="message">כמה מילים על הפנייה</label><textarea id="message" name="message"></textarea></div>
-        <button type="submit" class="form-submit">שליחת פנייה</button>
-        <p class="form-status" id="formStatus"></p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label>שם מלא</label>
+          <input type="text" id="name" required placeholder="הכנס שם מלא">
+        </div>
+        <div class="form-group">
+          <label>מספר טלפון</label>
+          <input type="tel" id="phone" required placeholder="050-0000000">
+        </div>
+        <div class="form-group">
+          <label>דואר אלקטרוני</label>
+          <input type="email" id="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label>תוכן הפנייה בקצרה</label>
+          <textarea id="message" placeholder="ספר/י בקצרה במה מדובר..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">שליחת פנייה</button>
       </form>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">YALOZ <span>— משרד עורכי דין</span></div>
-      <div class="footer-links">
-        <a href="#top">ראשי</a>
-        <a href="#about">אודות</a>
-        <a href="#practice">תחומי עיסוק</a>
-        <a href="#testimonials">ממליצים</a>
-        <a href="#contact">צור קשר</a>
-      </div>
+  <div class="wrap footer-wrap">
+    <div class="footer-logo">
+      <img src="logo1.jpeg" alt="אסף ילוז - משרד עורכי דין">
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 אסף ילוז, משרד עורכי דין. כל הזכויות שמורות.</span>
-      <span>050-3480110 · asafyaloz@gmail.com</span>
-    </div>
+    <div>© 2026 אסף ילוז – משרד עורכי דין. כל הזכויות שמורות.</div>
   </div>
 </footer>
 
 <script>
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('navLinks');
-  burger.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  form.addEventListener('submit', function(e){
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
-    const body = encodeURIComponent(`שם: ${name}\nטלפון: ${phone}\nדוא"ל: ${email}\n\n${message}`);
-    window.location.href = `mailto:asafyaloz@gmail.com?subject=${encodeURIComponent('פנייה חדשה מהאתר')}&body=${body}`;
-    status.style.display = 'block';
-    status.textContent = 'נפתחת תוכנת הדוא"ל שלכם לשליחת הפנייה...';
+    
+    const mailtoUri = `mailto:asafyaloz@gmail.com?subject=${encodeURIComponent('פנייה חדשה מאתר המשרד')}&body=${encodeURIComponent(`שם: ${name}\nטלפון: ${phone}\nדוא"ל: ${email}\n\nהודעה:\n${message}`)}`;
+    window.location.href = mailtoUri;
   });
 </script>
 
