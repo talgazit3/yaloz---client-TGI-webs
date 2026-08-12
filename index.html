@@ -225,7 +225,8 @@
 
   /* ---------- Eyebrow / heading system ---------- */
   .eyebrow{
-    display:inline-flex;
+    display:flex;
+    width:fit-content;
     align-items:center;
     gap:10px;
     font-size:.82rem;
@@ -234,6 +235,7 @@
     font-weight:700;
     margin-bottom:14px;
   }
+  .heading-wrap.center .eyebrow{margin-inline:auto;}
   .eyebrow::before{
     content:'';
     width:26px;height:1px;
